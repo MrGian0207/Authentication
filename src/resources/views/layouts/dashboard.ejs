@@ -1,0 +1,13 @@
+<ul>
+    <% for(let key in renderedUser) { %>
+        <% if (renderedUser.hasOwnProperty(key)) { %>
+            <li>
+                <%= key %> : <%= renderedUser[key] %>
+            </li>
+        <% } %>
+    <% }; %>
+</ul>
+
+<form action="/logout" method="POST">
+    <button class="btn btn-warning" type="submit">Log Out</button>
+</form>
